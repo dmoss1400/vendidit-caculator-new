@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vendidit Calculator</title>
-  </head>
-  <body>
-    <div id="root"></div>  <!-- React will render the app here -->
-  </body>
-</html>
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";  // Ensure this imports from App.js
+import "./index.css";  // Optional, if you have styles (but not necessary for now)
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
