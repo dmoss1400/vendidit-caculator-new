@@ -1,12 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 function App() {
   const [input, setInput] = useState("");  // Tracks the user input
   const [result, setResult] = useState("");  // Tracks the result of the calculation
-
-  useEffect(() => {
-    console.log("App component rendered!");
-  }, []);  // This will log when the component is mounted.
 
   const handleClick = (value) => {
     setInput(input + value);  // Adds value (number or operator) to the input
@@ -68,4 +64,3 @@ function App() {
 }
 
 export default App;
-
