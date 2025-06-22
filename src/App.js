@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function App() {
   const [input, setInput] = useState("");  // Tracks the user input
   const [result, setResult] = useState("");  // Tracks the result of the calculation
+
+  useEffect(() => {
+    console.log("App component rendered!");
+  }, []);  // This will log when the component is mounted.
 
   const handleClick = (value) => {
     setInput(input + value);  // Adds value (number or operator) to the input
@@ -45,17 +49,17 @@ function App() {
         <button onClick={() => handleClick("2")}>2</button>
         <button onClick={() => handleClick("3")}>3</button>
         <button onClick={() => handleClick("+")}>+</button>
-        
+
         <button onClick={() => handleClick("4")}>4</button>
         <button onClick={() => handleClick("5")}>5</button>
         <button onClick={() => handleClick("6")}>6</button>
         <button onClick={() => handleClick("-")}>-</button>
-        
+
         <button onClick={() => handleClick("7")}>7</button>
         <button onClick={() => handleClick("8")}>8</button>
         <button onClick={() => handleClick("9")}>9</button>
         <button onClick={() => handleClick("*")}>*</button>
-        
+
         <button onClick={() => handleClick("0")}>0</button>
         <button onClick={() => handleClick("/")}>/</button>
       </div>
@@ -64,3 +68,4 @@ function App() {
 }
 
 export default App;
+
